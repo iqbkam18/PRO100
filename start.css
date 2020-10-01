@@ -1,0 +1,230 @@
+body{
+    margin: 0px;
+    background-color: black;
+}
+/* scenen */
+#mal-container{
+    width: 1535px;
+    height: 680px;
+    margin: auto;
+    background-color: black;
+    position: relative;
+    margin-top: 40px;
+	z-index: 0;
+    overflow: hidden;
+}
+
+#music {
+	position: absolute;
+	overflow: hidden;
+	z-index: -1;
+	opacity: 0;
+}
+
+#intro {
+	position: absolute;
+	font-size: 30px;
+	font-family: 'Concert One', cursive;
+	right: 790px;
+	bottom: 500px;
+	color: white;
+	opacity: 0;
+	animation-name: intro;
+    animation-duration: 5s;
+	animation-delay: 3s;
+	animation-timing-function: linear;
+	animation-fill-mode: backwards;
+	animation-iteration-count: 1;
+}
+
+#intro2 {
+	position: absolute;
+	font-size: 30px;
+	font-family: 'Concert One', cursive;
+	right: 750px;
+	bottom: 400px;
+	color: white;
+	opacity: 0;
+	animation-name: intro2;
+    animation-duration: 5s;
+	animation-delay: 8s;
+	animation-timing-function: linear;
+	animation-fill-mode: backwards;
+}
+
+#intro3 {
+	position: absolute;
+	font-size: 30px;
+	font-family: 'Concert One', cursive;
+	right: 590px;
+	bottom: 300px;
+	color: white;
+	opacity: 0;
+	animation-name: intro2;
+    animation-duration: 5s;
+	animation-delay: 12s;
+	animation-timing-function: linear;
+	animation-fill-mode: backwards;
+}
+
+#news {
+	position: absolute;
+	width: 300px;
+	right: 50%;
+	bottom: 160px;
+	transform: rotate(-10deg);
+	opacity: 0;
+	z-index: 1;
+	animation-name: news;
+    animation-duration: 8s;
+	animation-delay: 14s;
+	animation-timing-function: linear;
+	animation-fill-mode:backwards;
+}
+
+#text {
+	position: absolute;
+	font-size: 80px;
+	font-family: 'Audiowide', cursive;
+	right: 925px;
+	bottom: 330px;
+	color: white;
+	opacity: 1;
+	margin: 0px 0px 0xp 0px;
+	animation-name: text;
+    animation-duration: 7s;
+	animation-delay: 20s;
+	animation-timing-function:linear;
+	animation-fill-mode: backwards;
+}
+
+#text2 {
+	position: absolute;
+	font-size: 60px;
+	font-family: 'Audiowide', cursive;
+	right: 622px;
+	bottom: 300px;
+	margin: 0px 0px 0xp 0px;
+	color: #f4511e;
+	opacity: 1;
+	animation-name: text2;
+    animation-duration: 4s;
+	animation-delay: 23s;
+	animation-timing-function: linear;
+	animation-fill-mode: backwards;
+}
+
+.button1 {
+	background-color: #f4511e; /* button color: red */
+	position: absolute;
+    color: white; /* text color */
+	border-radius: 10px;
+    padding: 10px 25px;
+    text-align: center;
+	width: 200px;
+    text-decoration:none;
+	text-transform: uppercase;
+    display: inline-block;
+    font-size: 18px;
+	opacity: 1;
+	font-family: 'Didact Gothic', sans-serif;
+    margin: 350px 0px 0px 500px;
+	transition: .2s;
+    cursor: pointer; /* change the mouse cursor */
+	transition: transform .2s; 
+	z-index: 1; /* foreground and background */
+	animation-name: button_fade; /* specifies the name */
+	animation-duration: 5s; /* Duration of how long one cycle will take  */
+	animation-delay: 27s; /* specifies how long the animation will delay */
+	animation-timing-function: linear; /* speed curve */
+	animation-fill-mode: backwards; /* style before it's playing*/
+}
+
+.button2 {
+	background-color: white; /* button color: red */
+	position: absolute;
+    color: black; /* text color */
+	border-radius: 10px;
+    padding: 8px 15px;
+    text-align: center;
+	width: 150px;
+    text-decoration:none;
+	text-transform: uppercase;
+    display: inline-block;
+	opacity: 0.5;
+    font-size: 15px;
+	font-family: 'Didact Gothic', sans-serif;
+    margin:-30px 0px 0px 1085px;
+	transition: .2s;
+    cursor: pointer; /* change the mouse cursor */
+	transition: transform .2s; 
+	z-index: 1; /* foreground and background */
+}
+/* button effect with :hover "mouse over it" */
+.button1:hover {
+  transform: scale(1.2);
+}
+
+/* button effect with :hover "mouse over it" */
+.button2:hover {
+  transform: scale(1.2);
+}
+
+
+/* keyframe for tittle2 "fade animation" */
+@keyframes intro {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+/* keyframe for tittle2 "fade animation" */
+@keyframes intro2 {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+/* keyframe for tittle2 "fade animation" */
+@keyframes intro3 {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+@keyframes news {
+	0% {opacity: 0; transform: scale(1) rotate(-10deg);}
+	50% {opacity: 1; transform: scale(1.2) rotate(-10deg);}
+	100% {opacity: 0; transform: scale(1.3) rotate(10deg);}
+}
+
+@keyframes text {
+	0% {opacity: 0; right: -300px;}
+	100% {opacity: 1; right: 925px;}
+}
+
+@keyframes text2 {
+	0% {opacity: 0; color: white; font-size: 80px;}
+	100% {opacity: 1; color: #f4511e; font-size: 60px;}
+}
+
+/* keyframe for button "button fade animation" */
+@keyframes button_fade {
+	0% {background-color: transparent; color: transparent;} /* Makes the text transparent */
+	100% {background-color: #f4511e ; color: white;} /* Makes the box visible after animation duration */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

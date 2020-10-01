@@ -1,0 +1,267 @@
+body{
+    margin: 0px;
+    background-color: black;
+}
+/* scenen */
+#dinosaur-container{
+    width: 1535px;
+    height: 680px;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+/* home button, returns to front-page */
+#home-button{
+    position: absolute;
+    top: 0;
+    width: 70px;
+    opacity: 0.4;
+    z-index: 10;
+}
+/* Home button-hover effect */
+#home-button:hover{
+    opacity: 1;
+}
+
+/* Button to next page*/
+#d_button1 {
+background-color: #f4511e; /* red */
+position: absolute;
+white-space: nowrap;
+color: white;
+border-radius: 10px;
+padding: 18px 22px;
+text-align: center;
+font-family: 'Didact Gothic', sans-serif;
+transition: .2s;
+width: 150px;
+text-decoration: none;
+display: inline-block;
+font-size: 15px;
+margin: 415px 100px 50px 230px;
+cursor: pointer;
+z-index: 1;
+animation-name: button_fade1;
+animation-duration: 5s;
+animation-delay: 8s;
+animation-timing-function: linear;
+animation-fill-mode: backwards;
+}
+
+#d_button1:hover{
+    transform: scale(1.2);
+}
+
+@keyframes button_fade1 {
+	0% {background-color: transparent; color: transparent;}
+	100% {background-color: #f4511e ; color: white;}
+}
+
+/* Button to next page */
+#d_button2 {
+background-color: #f4511e; /* red */
+position: absolute;
+white-space: nowrap;
+color: white;
+border-radius: 10px;
+padding: 18px 22px;
+text-align: center;
+font-family: 'Didact Gothic', sans-serif;
+transition: .2s;
+width: 150px;
+text-decoration: none;
+display: inline-block;
+font-size: 15px;
+margin: 415px 100px 80px 550px;
+cursor: pointer;
+z-index: 1;
+animation-name: button_fade2;
+animation-duration: 5s;
+animation-delay: 8s;
+animation-timing-function: linear;
+animation-fill-mode: backwards;
+}
+
+#d_button2:hover{
+    transform: scale(1.2);
+}
+@keyframes button_fade2 {
+	0% {background-color: transparent; color: transparent;}
+	100% {background-color: #f4511e ; color: white;}
+}
+
+/* metro */ 
+#dinosaur-metro{
+    position: absolute;
+    left: -850px;
+    width: 800px;
+    bottom: 80px;
+    animation-name: dinosaur-metro-drive;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    z-index: 10;
+    }
+
+/* metro animation */ 
+@keyframes dinosaur-metro-drive{
+    0%{
+        left: -850px;
+    }
+    
+    100%{
+        left: 110px;
+    }
+}
+
+/*background photo*/
+#dinosaur-photo{
+    position: absolute;
+    z-index: 1;
+    height: 680px;
+    width: 1535px;
+}
+
+
+/* metro - ground */ 
+#dinosaur-ground{
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 1535px;
+    z-index: 3; 
+}
+
+/* metro - track */ 
+#dinosaur-track{
+    position: absolute;
+    height: 5px;
+    bottom: 75px;
+    width: 1535px;;
+    z-index: 5;   
+}
+
+/* t-rex */
+#t-rex{
+    position: absolute;
+    right: -1000px;
+    height: 400px;
+    width: auto;
+    bottom: 53px;
+    z-index: 10;    
+    animation-name: trexMoves;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-delay: 3s;
+}
+
+/* t-rex animaton*/
+@keyframes trexMoves {
+    0%{
+        right: -1000px; 
+       
+}
+    100%{
+        right: 55px;
+    }
+
+}
+
+
+/* text */ 
+#text1 {
+	position: absolute;
+	text-align: center;
+	height: 80px;
+	bottom: 320px;
+	right: 780px;
+	margin: 0px 0px 0px 0px;
+	font-size: 40px;
+	letter-spacing: 1px;
+	font-family: 'Didact Gothic', sans-serif;
+    z-index: 1;
+	color: black;
+	animation-name: text-fade;
+	animation-delay: 3s;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-fill-mode: backwards;
+
+}
+
+@keyframes text-fade {
+	0% {color: transparent;}
+	100% {color: black;}
+}
+
+/* text */
+#text2 {
+	position: absolute;
+    text-align: center;
+	height: 85px;
+	bottom: 270px;
+	left: 220px;
+	margin: 0px 0px 0px 0px;
+	font-size: 20px;
+	letter-spacing: 1px;
+	font-family: 'Didact Gothic', sans-serif;
+    z-index: 1;
+	color: white;
+	animation-name: text2-fade;
+	animation-delay: 5s;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-fill-mode: backwards;
+
+}
+
+@keyframes text2-fade {
+	0% {color: transparent;}
+	100% {color: white;}
+}
+
+/* text */
+#text3 {
+	position: absolute;
+	text-align: center;
+	height: 80px;
+	bottom: 220px;
+	left: 350px;
+	margin: 5px 90px 0px 50px;
+	font-size: 15px;
+	letter-spacing: 1px;
+	font-family: 'Didact Gothic', sans-serif;
+    z-index: 1;
+	color: white;
+	animation-name: text3-fade;
+	animation-delay: 5s;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-fill-mode: backwards;
+
+}
+
+@keyframes text3-fade {
+	0% {color: transparent;}
+	100% {color: white;}
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,217 @@
+body{
+    margin: 0px;
+	background-color: black;
+}
+
+/* scenen */
+#cowboy2-container{
+    width: 1535px;
+    height: 680px;
+    margin: auto;
+    position: relative;
+	overflow: hidden;
+    margin-top: 40px;
+	z-index: 0;
+}
+
+/* background */
+#background {
+	position: absolute; /* choose if it's between each object, or side by side */
+	z-index: -1;
+	filter: blur(5px); /* blur effect */
+}
+
+/* metro image */
+#metro{
+    position: absolute;
+	overflow: hidden;
+    width: 1000px;
+    bottom: 80px;
+	left: 1700px;
+    animation-name: metro-drive;
+    animation-duration: 5.5s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    z-index: 1;
+   }
+
+/* cowboy image */
+.cowboy {
+	position: absolute;
+	overflow: hidden;
+	width: 150px;
+	bottom: 28px;
+	left: 1700px;
+	animation-name: cowboy-chase;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    z-index: 1;
+}
+
+/* class id of cowboy2 */
+.cowboy2 {
+	animation-duration: 8s; /* choose the animation duration */
+}
+
+/* class id of cowboy3 */
+.cowboy3 {
+	animation-duration: 7.5s;
+}
+
+/* class id of cowboy4 */
+.cowboy4 {
+	animation-duration: 9s;
+}
+
+/* ground image */
+#ground{
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 1635px;
+	left: 0px;
+    
+}
+
+/* metro track image */
+#track{
+    position: absolute;
+    height: 5px;
+    bottom: 75px;
+    width: 1535px;;
+    z-index: 3;
+	left: 0px;
+    
+}
+
+/* Link button1 */
+.button_1 {
+	background-color: #f4511e; /* red */
+	position: absolute; 
+    color: white;
+    left: 80px;
+    top: 100px;
+	border-radius: 10px;
+    padding: 20px 30px;
+    text-align: center;
+	width: 300px;
+    text-decoration: none;
+    display: inline-block;
+	font-family: 'Didact Gothic', sans-serif;
+    font-size: 26px;
+    margin: 50px 100px 0px 500px;
+    cursor: pointer; /* change the mouse cursor */
+	z-index: 1;
+    transition: .2s;
+	animation-name: button_fade;
+	animation-duration: 5s;
+	animation-delay: 4s;
+	animation-timing-function: linear;
+	animation-fill-mode: backwards;
+}
+
+/* button effect with :hover and span */
+.button:hover {
+  transform: scale(1.2);
+}
+
+#home-button{
+    position: absolute;
+    top: 0;
+    width: 70px;
+    opacity: 0.4;
+    z-index: 1;
+}
+/* Homebutton hover-effect */
+#home-button:hover{
+    opacity: 1;
+}
+
+/* bird gif */
+#bird2 {
+	position: absolute;
+	width: 200px;
+	left: -190px;
+	animation-name: bird_fly;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+}
+
+#text {
+	position: absolute;
+	text-align: center;
+	letter-spacing: 1px; 
+	height: 5px;
+	bottom: 541px;
+	right: 300px;
+	font-family: 'Didact Gothic', sans-serif;
+	font-size: 20px;
+	color: black;
+	z-index: 1;
+	animation-name: text_fade;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+}
+
+/* sun object */
+.sun {
+	position: absolute;
+	top: -480px;
+	left: 1130px;
+	bottom: 0px;
+	margin: auto;
+	right: 0px;
+	width: 70px;
+	border-radius: 50%;
+	height: 70px;
+	background: white;
+	opacity: 0.9;
+	background-color: lightyellow;
+	
+}
+
+
+/* keyframe for metro "left animation" */
+@keyframes metro-drive {
+	0% {left: -1000px;}
+	100% {left:1700px;}
+}
+
+/* keyframe for cowboy "left animation" */
+@keyframes cowboy-chase {
+	0% {left: -1000px;}
+	100% {left:1700px;}
+}
+
+
+/* keyframe for bird "left animation" */
+@keyframes bird_fly {
+	0% {left: 1400px;}
+	100% {left:-200px;}
+}
+
+/* keyframe for button "fade animation" */
+@keyframes button_fade {
+	0% {background-color: transparent; color: transparent;} /* Makes the text transparent */
+	100% {background-color: #f4511e ; color: white;} /* Makes the box and text visible after animation duration */
+}
+
+/* keyframe for text "fade animation" */
+@keyframes text_fade {
+	0% {color: transparent;}
+	100% {color: black;}
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,445 @@
+body{
+    margin: 0px;
+    background-color: black;
+}
+/* scenen */
+#future-container{
+    width: 1535px;
+    height: 680px;
+    margin: auto;
+    background-color: rgb(32, 32, 32);
+    position: relative;
+    margin-top: 40px;
+    overflow: hidden;
+    
+    /* Creating animation name, timing-functions etc for screen-shaking animation */
+    animation-name: shake;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+}
+
+/* screen-shake animation sequence */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(1px, 0px) rotate(1deg); }
+    30% { transform: translate(2px, 1px) rotate(0deg); }
+    40% { transform: translate(0px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 0px) rotate(-1deg); }
+    60% { transform: translate(-2px, 1px) rotate(0deg); }
+    70% { transform: translate(-1px, 0px) rotate(-1deg); }
+    80% { transform: translate(-2px, 0px) rotate(1deg); }
+    90% { transform: translate(0px, 1px) rotate(0deg); }
+    100% { transform: translate(0.5px, -0.5px) rotate(-0.5deg); }
+}
+
+/* Making a moon out of a div */
+#moon{
+    position: absolute;
+    top: 45px;
+    left: 200px;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255, 255, 0);
+    border-radius: 50%;
+}
+
+/* Making background image the right size */
+#background{
+    width: 1535px;
+    height: 680px;
+    
+    
+}
+
+/* home button, returns to front-page */
+#home-button{
+    position: absolute;
+    top: 0;
+    width: 70px;
+    opacity: 0.4;
+    z-index: 7;
+}
+/* Home button-hover effect */
+#home-button:hover{
+    opacity: 1;
+}
+
+/* Headline on top of the page */
+#headline {
+	position: absolute;
+	text-align: center;
+	height: 20px;
+	top: -22px;
+	right: -70px;
+	margin: 20px 600px 40px 350px;
+	font-size: 45px;
+	letter-spacing: 1px;
+	font-family: 'Didact Gothic', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+	color: #f4511e;
+
+
+}
+
+/* Info */
+#info {
+	position: absolute;
+	text-align: center;
+	height: 20px;
+	bottom: 460px;
+    top: 30px;
+	right: -70px;
+	margin: 20px 400px 40px 350px;
+	font-size: 22px;
+	letter-spacing: 1px;
+    font-family: 'Didact Gothic', sans-serif;
+	color: white;
+	animation-name: info_fade;
+	animation-delay: 4s;
+	animation-duration: 6s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: backwards;
+   z-index: 10:
+}
+
+
+
+/* Animation for the info-text */
+ @keyframes info_fade {
+	0% {color: transparent;}
+	100% {color: white;}
+}
+
+/* Adding and sizing the metro */
+#metro{
+    position: absolute;
+    left: -850px;
+    width: 800px;
+    bottom: 80px;
+    
+    /* Creating animation name, timing-functions etc for metro-shaking animation */
+    animation-name: metro-drive;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-delay: 2.8s;
+    animation-fill-mode: forwards;
+    z-index: 1;
+    }
+
+ /* Metro-shaking animation sequence */
+@keyframes metro-drive{
+    0%{
+        left: -850px;
+        transform: translate(1px, 1px) rotate(0deg);  } 
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100%{
+        left: 130px; 
+    }
+}
+
+/*Sizing and positioning of ground image*/
+#ground{
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 1535px;
+    
+}
+
+/*Sizing and positioning of track image*/
+#track{
+    position: absolute;
+    height: 5px;
+    bottom: 75px;
+    width: 1535px;;
+    z-index: 3;
+}
+
+/* smoke posisitioning and animation effects */
+#smoke{
+    position: absolute;
+    bottom: 90px;
+    left: 100px;
+}
+#smoke2{
+    position: absolute;
+    bottom: 100px;
+    width: 350px
+}
+#smoke3{
+    position: absolute;
+    bottom: 100px;
+    left: 600px;
+}
+
+.smoke{
+    animation-name: smoke; 
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    opacity: 0;
+}
+
+@keyframes smoke{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+/* End of smoke positioning and animation effects */
+
+/* blue origin rocket */
+#blue-rocket{
+    position: absolute;
+    left: 1133px;
+    bottom: 139px ;
+    width: 40px;
+    z-index: 1;
+    transition: all .5s linear 0s
+}
+/* BLue origin transition */
+#blue-rocket:hover{
+    width: 45px;
+}
+
+/* SpaceX rocket */
+#spacex-rocket{
+    position: absolute;
+    width: 35px;
+    bottom: 139px;
+    left: 1400px;
+    transition: all .5s linear 0s
+}
+/* SpaceX transition */
+#spacex-rocket:hover{
+    width: 40px;
+}
+
+/*  positioning, sizing Elon */
+#elon{
+    position: absolute;
+    width: 40px;
+    bottom: 75px;
+    right: -40px;
+    
+    /* Creating animation name, timing-functions etc for metro-shaking animation */
+    animation-name: elon-walk;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+
+/* Transparent box made for hovering effects on elon*/
+#elon-hover{
+    position: absolute;
+    bottom: 75px;
+    right: -40px;
+    width: 38px;
+    height: 95px;
+    background-color: transparent;
+    animation-name: elon-walk;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+    z-index: 2;
+}
+/* Adding hover effects for elon speech-bubble */
+#elon-hover:hover ~  #speech-elon{
+   display: block;
+}
+/* Make Elon walk into the screen */
+@keyframes elon-walk{
+    0%{
+        right: -40px;
+    }
+    100%{
+        right: 150px;
+    }
+}
+
+/* Making the speech bubble for Elon */
+#speech-elon{
+    display: none;
+    position: absolute;
+    right: 150px;
+    bottom: 190px;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 110px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+#speech-bubble-elon{
+    position: absolute;
+    border-style: solid;
+}
+
+#bottom-elon{
+    position: absolute;
+    border-color: whitesmoke transparent transparent transparent;
+    border-width: 8px 8px 0px 8px;
+    bottom:-8px;
+}
+
+#bottom-elon:after{
+    position: absolute;
+    border-color: white transparent transparent transparent;
+    border-style: solid;
+    border-width: 7px 7px 0px 7px;
+    left: 90px;
+    bottom: 2px;
+    content: "";
+}
+/* End of speech-bubble for Elon */
+
+/* positioning and sizing Jeff */
+#jeff{
+    position: absolute;
+    width: 40px;
+    bottom: 75px;
+    right: -40px;
+    
+    /* Creating animation name, timing-functions etc for metro-shaking animation */
+    animation-name: jeff-walk;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+
+/* Transparent box made for hovering effects on Jeff */
+#jeff-hover{
+    position: absolute;
+    bottom: 75px;
+    right: -40px;
+    width: 41px;
+    height: 84px;
+    background-color: transparent;
+    animation-name: jeff-walk;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+    z-index: 2;
+}
+
+/* Hover effects for Jeff speech-bubble*/
+#jeff-hover:hover ~  #speech-jeff{
+   display: block;
+}
+
+/* Making Jeff walk into the screen*/
+@keyframes jeff-walk{
+    0%{
+        right: -40px;
+    }
+    100%{
+        right: 410px;
+    }
+}
+
+/* Making the jeff speech-bubble */
+#speech-jeff{
+    display: none;
+    position: absolute;
+    right: 420px;
+    bottom: 190px;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 110px;
+    text-align: center;
+    padding: 20px;
+}
+
+#speech-bubble-jeff{
+    position: absolute;
+    border-style: solid;
+}
+
+#bottom-jeff{
+    position: absolute;
+    border-color: whitesmoke transparent transparent transparent;
+    border-width: 8px 8px 0px 8px;
+    bottom:-8px;
+}
+
+#bottom-jeff:after{
+    position: absolute;
+    border-color: white transparent transparent transparent;
+    border-style: solid;
+    border-width: 7px 7px 0px 7px;
+    left: 90px;
+    bottom: 2px;
+    content: "";
+}
+
+/* End of Jeff speech-bubble */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

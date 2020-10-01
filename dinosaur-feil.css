@@ -1,0 +1,229 @@
+body{
+    margin: 0px;
+    background-color: black;
+}
+/* scenen */
+#dinosaur2-container{
+    width: 1535px;
+    height: 680px;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+/* home button, returns to front-page */
+#home-button{
+    position: absolute;
+    top: 0;
+    width: 70px;
+    opacity: 0.4;
+    z-index: 10;
+}
+/* Home button-hover effect */
+#home-button:hover{
+    opacity: 1;
+}
+
+#feil-button1 {
+background-color: #f4511e; /* red */
+position: absolute;
+white-space: nowrap;
+color: white;
+border-radius: 10px;
+padding: 18px 22px;
+text-align: center;
+font-family: 'Didact Gothic', sans-serif;
+width: 150px;
+text-decoration: none;
+display: inline-block;
+font-size: 12px;
+left: 300px;
+margin: 230px 10px 10px 20px;
+cursor: pointer;
+z-index: 1;
+transition: .2s;
+animation-name: feil-button-fade1;
+animation-duration: 5s;
+animation-delay: 5s;
+animation-timing-function: linear;
+animation-fill-mode: backwards;
+}
+
+#feil-button1:hover{
+    transform: scale(1.2)
+}
+
+@keyframes feil-button-fade1 {
+	0% {background-color: transparent; color: transparent;}
+	100% {background-color: #f4511e; color: white;}
+}
+
+/* metro */
+#dinosaur2-metro{
+    position: absolute;
+    left: 110px;
+    width: 800px;
+    bottom: 80px;
+    animation-name: dinosaur2-metro-drive;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    z-index: 10;
+    animation-delay: 0.5s;
+    }
+
+@keyframes dinosaur2-metro-drive{
+    10%{
+        width: 700px;
+        transform: rotate(-60deg); 
+        bottom: 200px;
+    }
+    
+    50%{
+        width: 600px;
+        transform: rotate(-90deg);
+        bottom: 400px;
+    }
+    
+    100%{
+        width: 500px;
+        transform: rotate(-180deg);
+        left: -200px;
+        bottom: 60px;
+    }
+    
+}
+
+/* background photo */
+#dinosaur2-photo{
+    position: absolute;
+    z-index: 1;
+    height: 680px;
+    width: 1535px;
+}
+/* metro - ground */
+#dinosaur2-ground{
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 1535px;
+    z-index: 3;
+    
+}
+
+/* metro - track */
+#dinosaur2-track{
+    position: absolute;
+    height: 5px;
+    bottom: 75px;
+    width: 1535px;;
+    z-index: 5; 
+}
+
+/* t-rex */ 
+#t-rex2{
+    position: absolute;
+    right: 55px;
+    height: 400px;
+    width: auto;
+    bottom: 53px;
+    z-index: 10;    
+    animation-name: trexMoves2;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes trexMoves2{
+    100%{
+        right: 250px;
+    }
+}
+     
+/* fire */
+.fire-train{
+    position: absolute; 
+    z-index: 2;  
+    animation-name: train-fire;
+    animation-duration: 30s;
+    animation-delay: 5s; 
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    opacity: 0;
+}
+
+#fire1{
+    height: 200px;
+    width: 100px;
+    bottom: 53px; 
+    left: 100px;
+}
+ 
+#fire2{
+    height: 200px;
+    width: 100px;
+    bottom: 53px; 
+    left: 150px;
+}
+
+#fire3{
+    height: 200px;
+    width: 100px;
+    bottom: 53px; 
+    left: 50px;
+}
+/* fire - animation */
+@keyframes train-fire{
+    0%{
+        opacity: 0;
+    }
+    
+    50%{
+        opacity: 1;
+    }
+    
+    75%{
+        opacity: 1;
+    }
+    
+    80%{
+        opacity: 1;
+    }
+    
+    100%{
+        opacity: 0.7;
+    }
+}
+
+/* Gameover text*/
+#game-over {
+    position: absolute;
+    left: 200px;
+    bottom: 500px;
+	height: 10px;
+	margin: 10px 100px 10px 100px;
+	font-size: 60px;
+    font-family: serif;
+    color: #f4511e;
+    opacity: 1;
+    z-index: 1;
+    animation-name: game-over-anim;
+    animation-duration: 25s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards;
+}
+
+@keyframes game-over-anim {
+    0%{opacity: 0;}
+    40%{opacity: 1;}
+    50%{opacity: 1;}
+    100%{opacity: 1;}
+}
+
+    

@@ -1,0 +1,330 @@
+
+body{
+    margin: 0px;
+    background-color: black;
+}
+
+/* This is the container that everthing is relative to  */
+#blueorigin-container{
+    position: relative;
+    width: 1535px;
+    height: 680px;
+    margin: auto;
+    background-color: rgb(32, 32, 32);
+    background-image:url(images/rocketlaunch-landscape.jpg);
+    background-size: cover;
+    background-blend-mode: color-dodge;
+    margin-top: 40px;
+    overflow: hidden;
+    z-index: 10;
+
+    /* Creating animation name, timing-functions etc for red-flash animation */
+    animation-name: red-flash;
+    animation-duration: 3s;
+    animation-delay: 16s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+}
+
+/* red-flash animation sequence */
+@keyframes red-flash{
+    10%{background-color: red; opacity: 0.1;}
+    20%{background-color: red; opacity: 0.5;}
+    30%{background-color: red; opacity: 0.1;}
+    40%{background-color: red; opacity: 0.5;}
+    50%{background-color: red; opacity: 0.1;}
+    60%{background-color: red; opacity: 0.5;}
+    70%{background-color: red; opacity: 0.1;}
+    80%{background-color: red; opacity: 0.5;}
+    90%{background-color: red; opacity: 0.3;}
+    100%{background-color: red; opacity: 0.1;}
+}
+
+/* "start på nytt"-button */
+.button_1 {
+	position: absolute;
+    top: 150px;
+    left: 100px;
+	white-space: nowrap;
+    color: white;
+	border-radius: 10px;
+    border-color: black;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+	width: 200px;
+    display: inline-block;
+	font-family: serif;
+    font-size: 26px;
+    margin: 50px 100px 0px 500px;
+    cursor: pointer;
+    opacity: 0;
+    
+    /* Creating animation name, timing-functions etc for button-fade animation*/
+	animation-name: button_fade;
+    animation-delay: 27s;
+	animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+/* button-fade animation sequence */
+@keyframes button_fade {
+	0% {background-color: transparent; color: transparent; opacity: 0;}
+	100% {background-color: #f4511e ; opacity: 1;}
+}
+
+/* Game over text */ 
+#gameover {
+	position: absolute;
+    left: 450px;
+    top: 40px;
+	height: 10px;
+	margin: 0px 0px 0px 0px;
+	font-size: 105px;
+    font-family: serif;
+	color: #f4511e;
+    z-index: 5;
+    opacity: 0;
+    
+     /* Creating animation name, timing-functions etc for info-popup animation*/
+	animation-name: gameover-popup;
+	animation-delay: 27s;
+	animation-duration: 0s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+/* info-popup animation sequence */
+@keyframes gameover-popup{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+/* This is the sun */
+#sun{
+    position: absolute;
+    top:0;
+    left:200px;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255, 255, 0);
+    border-radius: 50%;
+}
+
+/* Elon Musk sitting rocket */
+#space-elon{
+    position: absolute;
+    width: 75px;
+    right: -80px;
+    bottom: 150px;
+    
+    /* Creating animation name, timing-functions etc for elon-flies animation*/
+    animation-name: elon-flies;
+    animation-delay: 26s;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+/* elon-flies animation sequence */
+@keyframes elon-flies{
+    0%{right: -80px;}
+    100%{right: 800px; bottom: 1000px;}
+}
+
+/* home button, returns to front page */
+#home-button{
+    position: absolute;
+    top: 0;
+    width: 70px;
+    opacity: 0.4;
+    z-index: 7;
+}
+ /* hover effect showing the home-image */
+#home-button:hover{
+    opacity: 1;
+}
+
+/* Placing the metro */
+#metro{
+    position: absolute;
+    width: 450px;
+    left: auto;
+    bottom: 300px;
+    transform: rotate(90deg);
+}
+
+/* Size of rockets and placement*/
+.rocket{
+    position: absolute;
+    width: 110px;
+    bottom: 80px;
+    z-index: 1;
+}
+
+/* Further placing left rocket */
+#rocket1{
+    left: 120px;
+}
+/* further placing right rocket  */ 
+#rocket2{
+    left: 208px;
+}
+
+/* rocket-container */ 
+.rocket-container{
+    position: absolute;
+    left: 690px;
+    bottom: 28px;
+     
+    /* Creating animation name, timing-functions etc for elon-flies animation */
+    animation-name: ascend-descend;
+    animation-duration: 20s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+ }
+/* Ascend-descend animation sequence */
+@keyframes ascend-descend{
+    0% {
+        left: 690px;
+        bottom: 28px;
+        transform: rotate(0deg);
+    } 50%{
+        left: 690px;
+        bottom: 700px;
+        transform: rotate(0deg);
+    } 51%{
+        left: 690px;
+        top: -2600px;
+        transform: rotate(200deg);
+    } 52%{ 
+        left: 690px;
+        top: -650px;
+        transform: rotate(200deg);
+    } 75%{ 
+        left: 690;
+        top: -550px;
+        transform: rotate(200deg)
+    } 100%{
+        left: 490px;
+        top: 350px;
+        transform: rotate(200deg)
+    }
+}
+
+
+/* fixing image of the launcher */
+#launcher{
+    position: absolute;
+    width: 300px;
+    left: 800px;
+    bottom: 80px;
+    z-index: 2;
+}
+
+/* Adding flames to the rocket */
+.thruster{
+    position: absolute;
+    left: 128px;
+    bottom: 0px;
+    transform: rotate(230deg);
+    width: 100px;
+    
+    /* Creating animation name, timing-functions etc for stop-working animation */
+    animation-name: stop-working;
+    animation-delay: 14s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+/* Stop-working animation sequence */
+@keyframes stop-working{
+    0%{opacity: 1}
+    100%{opacity: 0}
+}
+
+/* Placing left flame */
+#thruster1{
+    left: 128px;
+}
+
+/* Placing right flame */
+#thruster2{
+    left: 218px
+}
+
+/* placing the ground image */
+#ground{
+    position: absolute;
+    left:-10px; ;
+    bottom: 0;
+    height: 80px;
+    width: 15355px;
+    z-index: 1;
+}
+
+/* Placing image of Jeff */
+#jeff{
+    position: absolute;
+    width: 40px;
+    bottom: 75px;
+    right: 300px;
+   
+}
+
+/* Adding explosion GIF */
+#explosion{
+    position: absolute;
+    width: 450px;
+    left: 75px;
+    bottom: 50px;
+    opacity: 0;
+    z-index: 1;
+    
+    /* Creating animation name, timing-functions etc for explosion animation */
+    animation-name: explosion;
+    animation-delay: 24s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+}
+/* explosion animation sequence */
+@keyframes explosion{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+    
+    
+#music{
+    left: -1000px;
+    position: absolute;
+    z-index: -10;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+

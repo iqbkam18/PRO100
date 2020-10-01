@@ -1,0 +1,208 @@
+body{
+    margin: 0px;
+    background-color: black;
+
+}
+/* Scene */
+#frontpage{
+    width: 1535px;
+    height: 680px;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    margin-top: 40px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Homebutton, return to front-page */
+#home-button{
+    position: absolute;
+    top: 0;
+    width: 70px;
+    opacity: 0.4;
+    z-index: 1;
+}
+/* Homebutton hover-effect */
+#home-button:hover{
+    opacity: 1;
+}
+
+/* Metro */
+#metro{
+    position: absolute;
+    width: 800px;
+    bottom: 72px;
+    animation-name: metro-drive;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    z-index: 1;
+    }
+
+
+
+
+/* Ground */
+#ground{
+    position: absolute;
+    bottom: 0px;
+    height: 80px;
+    width: 1535px;
+    
+}
+
+/* Track */
+#track{
+    position: absolute;
+    height: 5px;
+    bottom: 70px;
+    width: 1535px;;
+    z-index: 3;    
+}
+
+/* Background */
+#background{
+    position: relative;
+    height: 680px;
+    width: 1535px;
+}
+
+/* Code for button 1 */
+#button_1 {
+background-color: #f4511e; /* black */
+position: absolute;
+color: white;
+right: 100px;
+bottom: 332px;
+border-radius: 10px;
+padding: 18px 22px;
+text-align: center;
+font-family: 'Didact Gothic', sans-serif;
+transition: .2s;
+width: 150px;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 40px 400px 0px 700px;
+cursor: pointer;
+z-index: 1;
+animation-name: button_fade1;
+animation-duration: 3s;
+animation-delay: 6s;
+animation-timing-function: linear;
+animation-fill-mode: backwards;
+}
+
+/* Animation for button 1 */
+@keyframes button_fade1 {
+	0% {background-color: transparent; color: transparent;}
+	100% {background-color: #f4511e ; color: transparent;}
+}
+
+/* Hover for button 1 */
+#button_1:hover{
+    transform: scale(1.2);
+}
+
+/* Code for button 2 */
+#button_2 {
+background-color: #f4511e; /* black */
+position: absolute;
+white-space: nowrap;
+color: white;
+bottom: 332px;
+right: 530px;
+border-radius: 10px;
+padding: 18px 22px;
+text-align: center;
+font-family: 'Didact Gothic', sans-serif;
+transition: .2s;
+width: 150px;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 240px 300px 0px 700px;
+cursor: pointer;
+z-index: 1;
+animation-name: button_fade2;
+animation-duration: 3s;
+animation-delay: 6s;
+animation-timing-function: linear;
+animation-fill-mode: backwards;
+}
+
+/* Animation for button 2 */
+@keyframes button_fade2 {
+	0% {background-color: transparent; color: transparent;}
+	100% {background-color: #f4511e ; color: transparent;}
+}
+
+/* Hover for button 2 */
+#button_2:hover{
+    transform: scale(1.2);
+}
+	
+/* Info */
+#info {
+	position: absolute;
+	text-align: center;
+	height: 20px;
+	bottom: 460px;
+	right: -70px;
+	margin: 20px 400px 40px 350px;
+	font-size: 25px;
+	letter-spacing: 1px;
+    font-family: 'Didact Gothic', sans-serif;
+	color: black;
+	animation-name: info_fade;
+	animation-delay: 1s;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-fill-mode: backwards;
+   
+}
+
+
+
+/* Animation for the info-text */
+ @keyframes info_fade {
+	0% {color: transparent;}
+	100% {color: black;}
+}
+
+/* Headline on top of the page */
+#headline {
+	position: absolute;
+	text-align: center;
+	height: 20px;
+	top: 10px;
+	right: -70px;
+	margin: 20px 600px 40px 350px;
+	font-size: 45px;
+	letter-spacing: 1px;
+	font-family: 'Didact Gothic', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+	color: white;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

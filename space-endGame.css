@@ -1,0 +1,183 @@
+body{
+    margin: 0px;
+    background-color: black;
+    background-repeat: no-repeat;
+}
+/* scenen */
+#space-container{
+    width: 1535px;
+    height: 680px;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+/* home button, returns to front-page */
+#home-button{
+    position: absolute;
+    top: 0;
+    width: 70px;
+    opacity: 0.4;
+    z-index: 10;
+    left: 0;
+}
+/* Home button-hover effect */
+#home-button:hover{
+    opacity: 1;
+}
+
+/* Train picture */
+#metro{
+    position: absolute;
+    top: 479px;
+    width: 600px;
+    bottom: 100px;
+    height: 80px;
+    left: 1000px;
+    z-index: 5;
+    }
+/* Earth picture */
+#earth{
+    z-index: 1;
+    position: absolute;
+    top:170px;
+    left:558px;
+    width: 380px;
+    animation: earthTurn 175s linear infinite;
+}
+/* Text on page */
+#info {
+	position: absolute;
+	text-align: center;
+	height: 20px;
+	bottom: 90px;
+	right: -170px;
+	margin: 20px 500px 40px 350px;
+	font-size: 15px;
+	letter-spacing: 1px;
+	font-family: 'Didact Gothic', sans-serif;
+	color: #f4511e;
+	animation-name: info_fade;
+	animation-delay: 5s;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-fill-mode: backwards;
+    z-index: 6;
+
+}
+
+/* Space background */
+#space{
+    position: relative;
+    width: 1535px;
+    height: 680px;
+}
+/* Flying Tesla car */
+#tesla{
+    position: absolute;
+    width: auto;
+    height: 60px;
+    top: 200px;
+    transform: rotate(-20deg);
+    animation: teslaFly 350s linear;
+    animation-fill-mode: forwards;
+    z-index: 3
+}
+/* General code for both spaceX rockets */
+.rocket{
+    position: absolute;
+    top: 430px;
+    left: auto;
+    width: 170px;
+    height: 830px;
+    z-index: 5;
+    animation: rocketBostersFly 200s linear;
+    animation-fill-mode: forwards;
+    
+} 
+/* Positoning for rocket 1 */
+#rocket1{
+    top: 5px;
+    transform: rotate(90deg);
+}
+/* Positoning for rocket 2 */
+#rocket2{
+    top: -1000px;
+    transform: rotate(90deg);
+}
+/* Container for the rocket train pictures */
+#rocket-container{
+        width: 150px;
+        height 100px;
+        background-color: black;
+        bottom: 100px;
+        left: 0px;
+}
+/* Animation for rocket boosters */
+@keyframes rocketBostersFly{
+    0%{
+        left: -10px;
+        top: 10px
+    }
+    0%{
+        transform: rotate(300deg)
+        
+    }
+    100%{
+         left: 1880px;
+    }
+}
+/* Animation for the Tesla car */
+@keyframes teslaFly{
+    0%{
+        left: 0px;
+    }
+    0%{
+        transform: rotate(250deg)
+    }
+    100%{
+        left: 1900px;
+    }
+}
+/* Animation for spinning the Earth */
+@keyframes earthTurn{
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
+/* Animation for the text to fade in */
+@keyframes info_fade {
+	0% {color: transparent;}
+	100% {color: #f4511e;}
+}
+
+       
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

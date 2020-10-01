@@ -1,0 +1,310 @@
+body{
+    margin: 0px;
+	background-color: black;
+}
+
+/* scenen */
+#cowboy-container{
+    width: 1535px;
+    height: 680px;
+    margin: auto;
+    position: relative;
+	overflow: hidden; 
+    margin-top: 40px;
+	z-index: 0; /* foreground and background */
+}
+
+/* background */
+#background {
+	position: absolute; /* choose if it's between each object, or side by side */
+	z-index: -1; /* foreground and background */
+	filter: blur(5px); /* blur effect */
+}
+
+#music {
+	position: absolute;
+	overflow: hidden;
+	z-index: -3;/* foreground and background */
+	filter: blur(1000px); /* blur effect */
+}
+
+/* The metro */
+#metro{
+    position: absolute;
+	overflow: hidden;
+    width: 1000px;
+    bottom: 80px;
+	left: 50px;
+    animation-name: metro-drive;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    z-index: 1;
+    }
+
+/* h1 tag in css */
+#tittle {
+	position: absolute;
+	text-align: center;
+	letter-spacing: 1px;
+	margin: 0px 10px 30px 0px;
+	height: 0.5px;
+	bottom: 550px;
+	right: 480px;
+	font-family: 'Didact Gothic', sans-serif;
+	font-size: 50px;
+	color: black;
+	z-index: 1; /* foreground and background */
+	animation-name: text_fade;
+	animation-duration: 7s;
+	animation-timing-function: linear;
+
+}
+
+/* paragraph in css */
+#info {
+	position: absolute;
+	text-align: center;
+	height: 20px;
+	bottom: 460px;
+	right: -70px;
+	margin: 20px 500px 40px 350px;
+	font-size: 15px;
+	letter-spacing: 1px;
+	font-family: 'Didact Gothic', sans-serif;
+	z-index: 1; /* foreground and background */
+	color: black;
+	animation-name: info_fade;
+	animation-delay: 5s;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-fill-mode: backwards;
+
+}
+
+/* Dilemma paragraph */
+#dilemma {
+	position: absolute;
+	text-align: center;
+	height: 20px;
+	bottom: 360px;
+	right: -70px;
+	margin: 20px 500px 40px 350px;
+	font-size: 15px;
+	letter-spacing: 1px;
+	font-family: 'Didact Gothic', sans-serif;
+	color: black;
+	z-index: 1; /* foreground and background */
+	animation-name: dilemma_fade; /* specifies the name */
+	animation-duration: 5s; /* Duration of how long one cycle will take  */
+	animation-delay: 11s; /* specifies how long the animation will delay */
+	animation-timing-function: linear; /* speed curve */
+	animation-fill-mode: backwards; /* style before it's playing*/
+}
+
+/* Ground image */
+#ground{
+    position: absolute;
+	z-index: 1;
+    bottom: 0;
+    height: 80px;
+    width: 1535px;
+    
+}
+
+/* metro track image */
+#track{
+    position: absolute;
+    height: 5px;
+    bottom: 75px;
+    width: 1535px;;
+    z-index: 2; 
+    
+}
+
+/* Link button1 */
+.button_1 {
+	background-color: #f4511e; /* button color: red */
+	position: absolute;
+    left: 100px;
+    bottom: 300px ;
+    color: white; /* text color */
+	border-radius: 10px;
+    padding: 18px 22px;
+    text-align: center;
+	width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+	font-family: 'Didact Gothic', sans-serif;
+    margin: 240px 00px 0px 400px;
+    cursor: pointer; /* change the mouse cursor */
+	z-index: 1; /* foreground and background */
+    transition: .2s;
+	animation-name: button_fade; /* specifies the name */
+	animation-duration: 5s; /* Duration of how long one cycle will take  */
+	animation-delay: 15s; /* specifies how long the animation will delay */
+	animation-timing-function: linear; /* speed curve */
+	animation-fill-mode: backwards; /* style before it's playing*/
+}
+
+/* Link button2 */
+.button_2 {
+	background-color: #f4511e; /* button color: red */
+	position: absolute;
+    color: white; /* text color */
+    bottom: 300px;
+    left: 75px;
+	border-radius: 10px;
+    padding: 18px 22px;
+    text-align: center;
+	font-family: 'Didact Gothic', sans-serif;
+	width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 240px 100px 0px 700px;
+    cursor: pointer; /* change the mouse cursor */
+	z-index: 1;
+    transition: .2s;
+	animation-name: button_fade; /* specifies the name */
+	animation-duration: 5s; /* Duration of how long one cycle will take  */
+	animation-delay: 15s; /* specifies how long the animation will delay */
+	animation-timing-function: linear; /* speed curve */
+	animation-fill-mode: backwards; /* style before it's playing*/
+}
+
+#home-button{
+    position: absolute;
+    top: 0;
+    width: 70px;
+    opacity: 0.4;
+    z-index: 1;
+}
+/* Homebutton hover-effect */
+#home-button:hover{
+    opacity: 1;
+}
+
+/* Bird gif */
+#bird {
+	position: absolute;
+	width: 200px;
+	left: -190px;
+	z-index: 1;
+	animation-name: cloud_fly;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+}
+
+/* cloud image */
+#cloud {
+	position: absolute;
+	width: 100px;
+	left: -190px;
+	bottom: 600px;
+	z-index: 1;
+	animation-name: cloud_fly;
+	animation-duration: 60s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+}
+
+/* robber / cowboy image */
+#robber {
+	position: absolute;
+	width: 50px;
+	left: 1100px;
+	bottom: 80px;
+	right: 300px;
+	z-index: 1;
+	animation-name: robber_walk;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+}
+
+/* sun object */
+.sun {
+	position: absolute;
+	top: -480px;
+	left: 1130px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background: white;
+	opacity: 0.9;
+	background-color: lightyellow;
+	
+}
+
+/* button effect with :hover "mouse over it" */
+.button:hover {
+  transform: scale(1.2);
+}
+
+
+
+
+/* keyframe for metro "left animation" */
+@keyframes metro-drive {
+	0% {left: -1000px;}
+	100% {left:50px;}
+}
+
+/* keyframe for tittle "fade animation" */
+@keyframes text_fade {
+	0% {color: transparent;} /* Text will start transparent */
+	100% {color: black;} /* Text will change color to black */
+}
+
+/* keyframe for info "fade animation" */
+@keyframes info_fade {
+	0% {color: transparent;}
+	100% {color: black;}
+}
+
+/* keyframe for dilemma "fade animation" */
+@keyframes dilemma_fade {
+	0% {color: transparent;}
+	100% {color: black;}
+}
+
+/* keyframe for bird "left animation" */
+@keyframes bird_fly {
+	0% {left: 1400px;} /* Image will start moving left */
+	100% {left:-200px;} /* Image will finish moving left */
+}
+
+/* keyframe for cloud "left animation" */
+@keyframes cloud_fly {
+	0% {left: 1400px;}
+	100% {left:-200px;}
+}
+
+/* keyframe for button "button fade animation" */
+@keyframes button_fade {
+	0% {background-color: transparent; color: transparent;} /* Makes the text transparent */
+	100% {background-color: #f4511e ; color: transparent;} /* Makes the box visible after animation duration */
+}
+
+/* keyframe for robber "left animation" */
+@keyframes robber_walk {
+	0% {left: 1400px;}
+	100% {left:1100px;}
+}
+
+
+
+
+
+
+
+
+
+
+

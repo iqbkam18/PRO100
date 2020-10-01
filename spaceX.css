@@ -1,0 +1,169 @@
+body{
+    margin: 0px;
+    background-color: black;
+}
+
+.button_1 {
+	background-color: rgba(247, 0, 0, 0.26); /* red */
+	position: absolute;
+    color: white;
+	border-radius: 10px;
+    padding: 20px 30px;
+    text-align: center;
+	width: 200px;
+    text-decoration: none;
+    display: inline-block;
+	font-family: 'Didact Gothic', sans-serif;
+    font-size: 26px;
+    margin: 50px 100px 0px 500px;
+    cursor: pointer;
+    transition: .2s;
+	animation-name: button_fade;
+	animation-duration: 10s;
+    animation-fill-mode: forwards;
+    z-index: 5;
+    top: 10px;
+}
+.button_1:hover{
+    transform: scale(1.2)
+}
+
+/*keyframe for button "fade animation" */
+@keyframes button_fade {
+	0% {background-color: transparent; color: transparent; opacity: 0;}
+    80% {background-color: transparent; color: transparent; opacity: 0;}
+	100% {background-color: #f4511e ; opacity: 1;}
+}
+/* Conatiner for */
+#spaceX-launch-container{
+    width: 1535px;
+    height: 680px;
+    margin: auto;
+    background-color: rgb(32, 32, 32);
+    position: relative;
+    margin-top: 40px;
+    overflow: hidden;
+}
+/* The sun on the page*/
+#sun{
+    position: absolute;
+    top:0;
+    left:200px;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255, 255, 0);
+    border-radius: 50%;
+}
+/* Background for the page */
+#background{
+    width: 1535px;
+    height: 680px;
+    background-image:url(images/landscape.jpg);
+}
+
+/* home button, returns to front-page */
+#home-button{
+    position: absolute;
+    top: 0;
+    width: 70px;
+    opacity: 0.4;
+    z-index: 7;
+}
+/* Home button-hover effect */
+#home-button:hover{
+    opacity: 1;
+}
+
+/* Metro position */
+#metro{
+    position: absolute;
+    width: 450px;
+    left: auto;
+    bottom: 300px;
+    transform: rotate(90deg);
+}
+/* General code for */
+.rocket{
+    position: absolute;
+    width: 110px;
+    bottom: 80px;
+    z-index: 1;
+}
+/* Positon on Rocket 1 */
+#rocket1{
+    left: 130px;
+}
+/* Postion on rocket 2 */
+#rocket2{
+    left: 200px;
+}
+/* Animation for the whole rocket */
+.rocket-container{
+    position: absolute;
+    left: 690px;
+    bottom: 28px;
+    
+    
+    animation-name: ascend;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    
+}
+/* Rocket flying */
+@keyframes ascend{
+    0% {
+        left: 690px;
+        bottom: 28px;
+    } 100%{
+        left: 690px;
+        bottom: 700px;
+    }
+}
+/* launch pad picture */
+#launcher{
+    position: absolute;
+    width: 300px;
+    left: 800px;
+    bottom: 80px;
+    z-index: 2;
+}
+/* General code for flames */
+.thruster{
+    position: absolute;
+    left: 128px;
+    bottom: 0px;
+    transform: rotate(230deg);
+    width: 100px;
+    
+/* Flame 1 */
+}
+#thruster1{
+    left: 137px;
+}
+/* Flame 2 */
+#thruster2{
+    left: 207px
+}
+
+/* Ground picture */
+#ground{
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 1535px;
+    z-index: 1;
+}
+
+/* Placement for figure Elon Musk*/
+#elon{
+    position: absolute;
+    width: 40px;
+    bottom: 75px;
+    right: 40px;
+}
+#music{
+    position: absolute;
+    left: -1000px;
+}
